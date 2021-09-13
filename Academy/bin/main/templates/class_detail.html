@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class_detail</title>
+</head>
+<body>
+    <p>수업아이디, 수업이름, 강사, 신청인원/최대인원, 설명, 수업일정(시작일, 종료일, 수업요일)</p>
+    <p>각 정보가 화면에 모두 출력, 강사이름 클릭시 강사 상세보기 화면 이동</p>
+    <table border="1">
+    <thead>
+    	<tr>
+    	<td></td>
+    		<th>수업 이름</th>
+    		<th>강사</th>
+    		<th>신청 인원</th>
+    		<th>최대 인원</th>
+    		<th>설명</th>
+    		<th>수업일정(시작일, 종료일, 수업요일)</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr>
+    	<th>1번</th>
+    		<td th:text=${classes1.lessonName}></td>
+    		<td th:text=${classes1.teacher}></td>
+    		<td th:text=${classes1.applicant}></td>
+    		<td th:text=${classes1.maxApplicant}></td>
+    		<td th:text=${classes1.explanation}></td>
+    		<td th:text=${classes1.schedule}></td>
+    	</tr>
+    	<tr>
+    	<th>2번</th>
+    		<td th:text=${classes2.lessonName}></td>
+    		<td th:text=${classes2.teacher}></td>
+    		<td th:text=${classes2.applicant}></td>
+    		<td th:text=${classes2.maxApplicant}></td>
+    		<td th:text=${classes2.explanation}></td>
+    		<td th:text=${classes2.schedule}></td>
+    	</tr>
+    </tbody>
+    </table>
+    <p>이름입력 인풋, 신청 버튼(이 버튼은 API로 동작) 서버에서(result:"ok", maxStudent:n, currentStudent:m)으로 응답시 화면에 신청인원 부분 갱신</p>
+    <input placeholder="수강셍의 이름을 입력하세요."/>
+    <button>신청</button>
+</body>
+</html>

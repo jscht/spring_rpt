@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강사 리스트</title>
+</head>
+<body>
+    <p>강사아이디, 강사이름, 전문분야, 개설수업리스트(개설수업아이디, 개설수업이름)</p>
+    <p>강사아이디, 강사이름 클릭시 강사 상세보기 화면으로 이동</p>
+    <table border="1">
+    <thead>
+    	<tr>
+    		<td></td>
+    		<th>강사 아이디</th>
+    		<th>강사</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr>
+    	<th>1번</th>
+    		<td>
+    			<a th:text=${teacher1.teacherId}
+    			   th:href="@{teachers/details(id=${teacher1.teacherId})}"></a>
+    		</td>
+    		<td>
+    		    <a th:text=${teacher1.teacherName}
+           		   th:href="@{teachers/details(id=${teacher1.teacherName})}"></a>
+    		</td>
+    	</tr>
+    	<tr>
+    	<tr>
+    	<th>2번</th>
+    		<td>
+    			<a th:text=${teacher2.teacherId}
+    			   th:href="@{teachers/details(id=${teacher2.teacherId})}"></a>
+    		</td>
+    		<td>
+ 		   		<a th:text=${teacher2.teacherName}
+           		   th:href="@{teachers/details(id=${teacher2.teacherName})}"></a>
+    		</td>
+    	</tr>
+    	<tr>
+    </tbody>
+    </table>
+</body>
+</html>

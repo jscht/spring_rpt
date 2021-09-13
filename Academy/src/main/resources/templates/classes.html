@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <p>수업 리스트(항목 4개 이상)</p>
+    <p>수업아이디. 수업이름 클릭시 상세화면 이동</p>
+    <table border="1">
+    <thead>
+    	<tr>
+    		<td></td>
+    		<th>수업 아이디</th>
+    		<th>수업 이름</th>
+    		<th>강사</th>
+    		<th>신청 인원</th>
+    		<th>최대 인원</th>
+    		<th>설명</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr>
+    	<th>1번</th>
+    		<td>
+    			<a th:text=${classes1.lessonId} th:href="@{classes/details(id=${classes1.lessonId})}"></a>
+    		</td>
+    		<td>
+    			<a th:text=${classes1.lessonName} th:href="@{classes/details(id=${classes1.lessonName})}"></a>
+    		</td>
+    		<td th:text=${classes1.teacher}></td>
+    		<td th:text=${classes1.applicant}></td>
+    		<td th:text=${classes1.maxApplicant}></td>
+    		<td th:text=${classes1.explanation}></td>
+    	</tr>
+    	<tr>
+    	<th>2번</th>
+    		<td>
+    			<a th:text=${classes2.lessonId} th:href="@{classes/details(id=${classes2.lessonId})}"></a>
+    		</td>
+    		<td>
+    			<a th:text=${classes2.lessonName} th:href="@{classes/details(id=${classes2.lessonName})}"></a>
+    		</td>
+    		<td th:text=${classes2.teacher}></td>
+    		<td th:text=${classes2.applicant}></td>
+    		<td th:text=${classes2.maxApplicant}></td>
+    		<td th:text=${classes2.explanation}></td>
+    	</tr>
+    	<tr>
+    	<th>3번</th>
+    		<td>
+    			<a th:text=${classes3.lessonId} th:href="@{classes/details(id=${classes3.lessonId})}"></a>
+    		</td>
+    		<td>
+    			<a th:text=${classes3.lessonName} th:href="@{classes/details(id=${classes3.lessonName})}"></a>
+    		</td>
+    		<td th:text=${classes3.teacher}></td>
+    		<td th:text=${classes3.applicant}></td>
+    		<td th:text=${classes3.maxApplicant}></td>
+    		<td th:text=${classes3.explanation}></td>
+    	</tr>
+    	<tr>
+    	<th>4번</th>
+    		<td>
+    			<a th:text=${classes4.lessonId} th:href="@{classes/details(id=${classes4.lessonId})}"></a>
+    		</td>
+    		<td>
+    			<a th:text=${classes4.lessonName} th:href="@{classes/details(id=${classes4.lessonName})}"></a>
+    		</td>
+    		<td th:text=${classes4.teacher}></td>
+    		<td th:text=${classes4.applicant}></td>
+    		<td th:text=${classes4.maxApplicant}></td>
+    		<td th:text=${classes4.explanation}></td>
+    	</tr>
+    </tbody>
+    </table>
+</body>
+</html>
